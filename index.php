@@ -10,13 +10,14 @@ if(isset($_POST['submitbutton']))
 {
     //fetch form data
     $firstname=$_POST['firstname'];
-    $lastname=$_POST['lastname';]
+    $lastname=$_POST['lastname'];
     $email=$_POST['email'];
     $phonenumber=$_POST['phonenumber'];
     $message=$_POST['message'];
     //submit form data
 
-    $insertdata=mysqli_query($conn,"INSERT INTO contactus(firstname,lastname,email,phonenumber,message)VALUES('$firstname','$lastname','$email','$phonenumber','$message')");
+    $insertdata=mysqli_query($conn,"INSERT INTO 
+    contactus(firstname,lastname,email,phonenumber,message)VALUES('$firstname','$lastname','$email','$phonenumber','$message')");
 
   
 
@@ -55,7 +56,7 @@ if(isset($_POST['submitbutton']))
 
        <div class="collapse navbar-collapse" id="navbardisplaynavigations">
           <div class="navbar-nav">
-            <a href="Aboutus.html" class="nav-link active">Home</a>
+            <a href="Aboutus.php" class="nav-link active">Home</a>
             <a href="#" class="nav-link">About Us</a>
             <a href="#" class="nav-link">Contact Us</a>
           </div>

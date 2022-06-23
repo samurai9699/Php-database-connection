@@ -10,17 +10,17 @@ if(isset($_POST['submitbutton']))
 {
   $email=$_POST['email'];
 
-  $emaildata=mysqli_query($conn, "INSERT INTO
+  $emaildata=mysqli_query($conn, "INSERT INTO 
   subscribers(email)VALUES('$email')");
 }
 
 if($emaildata)
 {
-  echo 'done';
+  echo 'SUCCESS';
 }
 else
 {
-  echo 'not';
+  echo 'INVALID';
 }
 
 
@@ -39,7 +39,7 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="syle.css">
-    <a href="index.html"></a>
+    <a href="index.php"></a>
     <title>About Us</title>
 </head>
 <body>
