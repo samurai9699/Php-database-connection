@@ -26,7 +26,7 @@
             <a href="#" class="nav-link">Home</a>
             <a href="#" class="nav-link">About us</a>
             <button class="btn btn-primary">
-            <a href="aboutus.html" class="nav-link active">
+            <a href="enroll.php" class="nav-link active">
                 Register now
             </a>
             </button>

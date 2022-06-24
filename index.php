@@ -25,7 +25,7 @@
 
        <div class="collapse navbar-collapse" id="navbardisplaynavigations">
           <div class="navbar-nav">
-            <a href="Aboutus.php" class="nav-link active">Home</a>
+            <a href="index.php" class="nav-link active">Home</a>
             <a href="#" class="nav-link">About Us</a>
             <a href="#" class="nav-link">Register now</a>
           </div>
