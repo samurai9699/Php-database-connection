@@ -4,25 +4,25 @@ $username='root';
 $password='';
 $database='zalego';
 
-$conn=mysqli_connect($server,$username,$password,$database);
+$dbconnect=mysqli_connect($server,$username,$password,$database);
 
-if(isset($_POST['submitbutton']))
-{
-  $email=$_POST['email'];
+if(isset($_POST['submitbutton'])) 
+ {
+         $email=$_POST['email'];
 
-  $emaildata=mysqli_query($conn, "INSERT INTO 
-  subscribers(email)VALUES('$email')");
+        $emaildata=mysqli_query($conn, "INSERT INTO 
+           subscribers(email)VALUES('$email')");
+      
+
+         if($emaildata)
+      {
+     echo 'SUCCESS';
+      }
+       else
+      {
+         echo 'INVALID';
+        }
 }
-
-if($emaildata)
-{
-  echo 'SUCCESS';
-}
-else
-{
-  echo 'INVALID';
-}
-
 
 ?>
 
@@ -46,7 +46,7 @@ else
     <!-- navigation bar here -->
   <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
     <div class="container-fluid">
-       <a href="#" class="navbar-brand">The Boondocks</a>
+       <a href="#" class="navbar-brand">Zalego Academy</a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
            <span class="navbar-toggler-icon"></span>
        </button>    
@@ -56,7 +56,7 @@ else
           <div class="navbar-nav">
             <a href="#" class="nav-link">Home</a>
             <a href="index.html" class="nav-link active">About us</a>
-            <a href="#" class="nav-link">Contact Us</a>
+            <a href="#" class="nav-link">Register now</a>
           </div>
         </div>
      </div>
@@ -176,8 +176,8 @@ else
 
 
 
-
-             <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script>
+             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>   
+             <!-- <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script> -->
              <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

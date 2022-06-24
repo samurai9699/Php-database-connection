@@ -1,36 +1,5 @@
- <?php
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
-
-$conn=mysqli_connect($server,$username,$password,$database);
-
-if(isset($_POST['submitbutton']))
-{
-    //fetch form data
-    $firstname=$_POST['firstname'];
-    $lastname=$_POST['lastname'];
-    $email=$_POST['email'];
-    $phonenumber=$_POST['phonenumber'];
-    $message=$_POST['message'];
-    //submit form data
-
-    $insertdata=mysqli_query($conn,"INSERT INTO 
-    contactus(firstname,lastname,email,phonenumber,message)VALUES('$firstname','$lastname','$email','$phonenumber','$message')");
-
-  
-
-    if($insertData)
-    {
-        echo "Data submitted successfully";
-    }
-    else{
-        echo "Error occured";
-    }
- }
-
-?> 
+<?php include('process.php')
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +17,7 @@ if(isset($_POST['submitbutton']))
   <!-- navigation bar here -->
   <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
     <div class="container-fluid">
-       <a href="#" class="navbar-brand">The Boondocks</a>
+       <a href="#" class="navbar-brand">Zalego Academy</a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
            <span class="navbar-toggler-icon"></span>
        </button>    
@@ -58,7 +27,7 @@ if(isset($_POST['submitbutton']))
           <div class="navbar-nav">
             <a href="Aboutus.php" class="nav-link active">Home</a>
             <a href="#" class="nav-link">About Us</a>
-            <a href="#" class="nav-link">Contact Us</a>
+            <a href="#" class="nav-link">Register now</a>
           </div>
         </div>
      </div>
@@ -130,6 +99,14 @@ if(isset($_POST['submitbutton']))
             </p>
              
         <form action="index.php" method="POST">
+               
+                <?php
+                if($response) 
+                {
+                    include('response.php');
+                }
+                 ?>
+               
                 <div class="row">
                     <div class="mb-3 col-lg-6">
                         <label for="firstName" class="form-label">First Name</label>
@@ -149,8 +126,8 @@ if(isset($_POST['submitbutton']))
                         <input type="tel" name="phonenumber" class="form-control" placeholder="enter your phone number">
                     </div>
                       <div class="mb-3 col-lg-12">
-                       <label for="message" name="message" class="form-label">Your Message</label>
-                       <textarea cols="30" rows="5" class="form-control"></textarea>
+                       <label for="message" class="form-label">Your Message</label>
+                       <textarea cols="30" rows="5" name="message" class="form-control"></textarea>
                       </div>
     
 
@@ -171,7 +148,8 @@ if(isset($_POST['submitbutton']))
     </footer>
 </div>
     <script src="bootstrap-5.2.0/js/bootstrap.min.js"></script>
-    <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script>
-    
+    <!-- <script src="bootstrap-5.2.0/js/bootstrap.bundle.js"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
 </body>
 </html>
