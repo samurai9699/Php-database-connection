@@ -1,3 +1,46 @@
+<?php
+ $response ="";
+ $server="localhost";
+ $username="root";
+ $password="";
+ $database="zalego";
+
+  $conn=mysqli_connect($server,$username,$password,$database);
+
+   if(isset($_POST['submitbutton']))
+{
+      //fetch form data
+      
+      $fullname=$_POST['fullname'];
+      $phonenumber=$_POST['phonenumber'];
+      $email=$_POST['email'];
+      $gender=$_POST['gender'];
+      $course=$_POST['course'];
+
+      //submit form data
+
+       $insertdata=mysqli_query($conn,"INSERT INTO 
+       enrollment(fullname,phonenumber,email,gender,course)VALUES('$fullname','$phonenumber','$email','$gender','$course')");
+
+  
+  
+      if($insertdata)
+        {
+         $response = "Succeess";
+         }
+    else{
+        $response = "Invalid" .mysqli_error($conn);
+        }
+}
+
+?> 
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +49,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="hi.css">
+    <link rel="stylesheet" href="style.css">
     <title>Register now</title>
 </head>
 <body>
@@ -23,8 +66,8 @@
 
        <div class="collapse navbar-collapse" id="navbardisplaynavigations">
           <div class="navbar-nav">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">About us</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="aboutus.php" class="nav-link">About us</a>
             <button class="btn btn-primary">
             <a href="enroll.php" class="nav-link active">
                 Register now
@@ -73,7 +116,7 @@
 </center>    
     
         </div>
-<form action="">
+<form action="enroll.php" method="POST">
     <div class="row">
         <div class="mb-3 col-lg-6">
             <label for="fullname" class="form-label">

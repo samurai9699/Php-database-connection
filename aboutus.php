@@ -54,9 +54,11 @@ if(isset($_POST['submitbutton']))
 
        <div class="collapse navbar-collapse" id="navbardisplaynavigations">
           <div class="navbar-nav">
-            <a href="#" class="nav-link">Home</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <button class="btn btn-primary">
             <a href="aboutus.php" class="nav-link active">About us</a>
-            <a href="#" class="nav-link">Register now</a>
+            </button>
+            <a href="enroll.php" class="nav-link">Register now</a>
           </div>
         </div>
      </div>
@@ -68,13 +70,13 @@ if(isset($_POST['submitbutton']))
 
 
        <div class="container">
-              <main class="p-5 mb-4 bg-light rounded-3">
-                    <h1 class="text-dark">
+              <main class="p-5 mb-4 bg-secondary rounded-3">
+                    <h1 class="text-bg-secondary">
                     <i>
                 About Us
                  </i>
              </h1>
-             <p>
+             <p class="text-bg-secondary">
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nam exercitationem, ullam quasi sit quam corrupti ratione! Consequatur earum qui cum provident voluptas quas suscipit?
              </p>
         </main>

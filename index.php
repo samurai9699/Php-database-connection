@@ -25,9 +25,12 @@
 
        <div class="collapse navbar-collapse" id="navbardisplaynavigations">
           <div class="navbar-nav">
+
+            <button class="btn btn-primary">
             <a href="index.php" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">About Us</a>
-            <a href="#" class="nav-link">Register now</a>
+            </button>
+            <a href="aboutus.php" class="nav-link">About Us</a>
+            <a href="enroll.php" class="nav-link">Register now</a>
           </div>
         </div>
      </div>
@@ -39,13 +42,13 @@
 
 
     <div class="container">
-      <main class="p-5 mb-4 bg-light rounded-3">
-           <h1 class="text-dark">
+      <main class="p-5 mb-4 text-bg-secondary rounded-3">
+           <h1 class="text-bg-secondary">
                <i>
                Welcome, Samurai Muriithi
                </i>
            </h1>
-           <p class="text-dark">
+           <p class="text-bg-secondary">
                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa eaque impedit dolores. Necessitatibus dolor quasi, cum perferendis natus quam nemo, facilis cumque illum minus repellat fuga qui, fugiat quidem ratione.
             </p>
             <button class="btn btn-primary">Learn more</button>
