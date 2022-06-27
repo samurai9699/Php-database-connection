@@ -35,12 +35,6 @@
 
 ?> 
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +43,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="i.css">
     <title>Register now</title>
 </head>
 <body>
@@ -132,7 +126,7 @@
                 Phone Number
                 </b>
             </label>
-            <input type="tel" name="phone" class="form-control" placeholder="Enter your last name">
+            <input type="tel" name="phonenumber" class="form-control" placeholder="Enter your last name">
         </div>
     
         <div class="mb-3 col-lg-6">
@@ -144,16 +138,16 @@
             <input type="email" name="email" class="form-control" placeholder="Enter your email address">
         </div>
         <div class="mb-3 col-lg-6">
-            <label for="gender" class="form-label">
+            <label for="gender"  class="form-label">
                   <b>
                 What's your gender
                   </b>            
             </label>
-            <select class="form-control" id="">
-                <option value="">-- Select your gender --</option>
-                <option value="">Male</option>
-                <option value="">Female</option>
-                <option value="">Rather not say</option>
+            <select name="gender" class="form-control" id="">
+                <option value="--select your gender--">--select your gender--</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="rather not say">rather not say</option>
             </select>
         </div>
              
@@ -162,16 +156,16 @@
                 undertaking, Please NOTE that this will be your learning track during the 2-weeks immersion.
                </p>
         <div class="mb-3 col-lg-6">
-                <label for="course" class="form-label">
+                <label for="course"  class="form-label">
                    <b> 
                     What's your preferred course?
                 </b>              
                 </label>
-                <select class="form-control" id="">
-                    <option value="">--Select your course--</option>
-                    <option value="">Software Development</option>
-                    <option value="">Cyber Security</option>
-                    <option value="">Android Design</option>
+                <select name="course" class="form-control" id="">
+                    <option value="--select your course--">--select your course--</option>
+                    <option value="software development">Software development</option>
+                    <option value="cyber security">cyber security</option>
+                    <option value="android design">android design</option>
                 </select>
         
         </div>
@@ -179,25 +173,24 @@
             You agree by providing your information you understand all our data privacy
             and protection policy outlined in our Terms $ condition and the privacy statement. 
         </p>
-        <br>
+    <br>
 
         <input type="checkbox">
         <span>
             <b> 
             Agree to terms and conditions
         </b>
-        <br>
+    
         
       </span>       
         <div class="mb-3 col-lg-6">
         <button type="submit" name="submitbutton" class="btn btn-primary">Submit application</button> 
         </div> 
-</form>
   <p class="text-center">
        Subscribe to get information, latest news about
                    Zalego Academy
   </p>
-  <form action=>
+
     <div class="row">
     <div class="mb-3 col-lg-6">
            <label for="email" class="form-label">Email</label>
