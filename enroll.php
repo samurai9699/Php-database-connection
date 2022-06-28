@@ -43,7 +43,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="i.css">
+    <link rel="stylesheet" href="style.css">
     <title>Register now</title>
 </head>
 <body>
@@ -83,15 +83,16 @@
 
    </h1>
    
-    <span><i class="fa fa-calendar fa-4x"></i></span>
+    <span><i class="fa fa-calendar fa-4x">
+    
+    </i></span>
     <span>20th July 2022</span>
 
 <br>
 
 
     <span><i class="fa fa-map-marker fa-4x"></i></span>
-    <span>Zalego Academy,
-          Devan Plaza
+    <span>Zalego Academy, Devan Plaza
     </span>
 
 </main>
@@ -162,7 +163,7 @@
                 </b>              
                 </label>
                 <select name="course" class="form-control" id="">
-                    <option value="--select your course--">--select your course--</option>
+                    <option value="--select your course--"> <b>--select your course-- </b> </option>
                     <option value="software development">Software development</option>
                     <option value="cyber security">cyber security</option>
                     <option value="android design">android design</option>
